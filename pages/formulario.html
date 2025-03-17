@@ -5,61 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="../css/styleformulario.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 
 <body>
+    <header>
+        <!--Barra de navegacion-->
+        <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu"> ☰ </label>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-    <!--Barra de navegacion-->
-    <nav>
-        <input type="checkbox" id="menu">
-        <label for="menu"> ☰ </label>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-    <section id="contacto">
-        <div class="form">
-            <h4>Formulario de contacto</h4>
-            <form>
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="correo" placeholder="Tu correo electrónico" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Asunto:</label>
-                    <input type="text" id="subject" name="asunto" placeholder="Asunto del mensaje" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required>
+    <main>
+        <section id="contacto">
+            <div class="form">
+                <h4>Formulario de contacto</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" requiered>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message"
+                            placeholder="Escribe tu mensaje aquí (maximo 300 caracteres)" rows="5" required>
                   </textarea>
-                </div>
-                <label for="edad">Edad:</label><br>
-                <select id="edad" name="edad" required>
-                    <option value="" disabled selected>Selecciona tu edad</option>
-                    <option value="18-25">18-25</option>
-                    <option value="26-35">26-35</option>
-                    <option value="36-45">36-45</option>
-                    <option value="46-60">46-60</option>
-                    <option value="60+">60+</option>
-                </select>
+                    </div>
+                    <label for="edad">Edad:</label><br>
+                    <select id="edad" name="edad" required>
+                        <option value="" disabled selected>Selecciona tu edad</option>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-60">46-60</option>
+                        <option value="60+">60+</option>
+                    </select>
 
-                <!--Agregar boton de aceptar que sus datos puedan ser procesados-->
+                    <!--Agregar boton de aceptar que sus datos puedan ser procesados-->
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                <button type="submit">Enviar</button>
-        </div>
-    </section>
+    <footer>Puedes contactarme a través de mi correo electrónico:
+        <a href="mailto:adafm1996@gmail.com">adafm1996@gmail.com</a>
+    </footer>
+
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root {
   --color-primario: ;
   --color-secundario: ;
@@ -7,8 +8,7 @@
   --color-bienvenidos: #575a90;
 }
 
-/* Tipografia para titulos */
-
+/* RESET GENERAL */
 * {
   font-family: Arial;
   margin: 0;
@@ -17,17 +17,21 @@
   text-decoration: none;
 }
 
+/* ESTILOS GENERALES */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-fondo);
+  margin: 0;
+  padding: 20px;
 }
 
 main {
   margin: auto;
   width: 80%;
-  max-width: 1200px; /*Cambiar px por otra medida*/
+  max-width: 1200px; /* Cambiar px por otra medida */
 }
 
+/* TIPOGRAFÍA */
 h1 {
   color: var(--color-titulos);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,10 +42,15 @@ h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h4 {
+  color: #333;
+}
+
 p {
   color: var(--color-letra);
 }
 
+/* HEADER */
 header {
   background-color: var(--color-bienvenidos);
   padding: 20px;
@@ -52,19 +61,17 @@ header {
   flex-wrap: wrap;
 }
 
+/* NAVIGATION */
+nav>input {
+  display: none;
+}
+
 input:checked~ul {
   display: block;
 }
 
-input {
-  display: none;
-}
-
 label {
-  box-sizing: border-box;
   display: inline-block;
-  border: 1px solid black;
-  border-radius: 5px;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -73,12 +80,10 @@ label {
   user-select: none;
 }
 
-/* Estilo del boton cuando se pasa el mouse por encima*/
 label:hover {
   background: grey;
 }
 
-/* Estilo del boton cuando el menú está expandido*/
 input:checked~label {
   background: lightgrey;
 }
@@ -90,8 +95,6 @@ ul {
   display: none;
 }
 
-
-
 li {
   display: block;
   background: lightgrey;
@@ -101,13 +104,11 @@ li {
   border-bottom: 1px solid grey;
 }
 
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
 li:hover {
   filter: brightness(110%);
 }
 
-/*Estilo cajas de texto */
-
+/* CAJAS Y CONTENIDO */
 .content {
   background-color: grey;
   border-radius: 20px;
@@ -115,7 +116,20 @@ li:hover {
   margin: 20px;
 }
 
-/*Estilo para cajas de imagenes*/
+/* IMÁGENES */
+.imageDNI img {
+  margin: auto;
+  max-width: 60%;
+  height: auto;
+}
+
+.imageLucha img,
+.imageDeveloper img {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
 #inicio,
 #biografia,
 #proyecto {
@@ -127,90 +141,73 @@ li:hover {
   min-height: 30vh;
 }
 
-.imageLucha img,
-.imageDNI img,
-.imageDeveloper img {
-  margin:auto;
-  max-width: 100%;
-  height: auto;
-}
-
 #biografia .content {
   width: 100%;
 }
 
-/* Estilo para formulario 
-
+/* FORMULARIO */
 .form {
-  background-color: #fff;
+  background: #d9d6ed;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  align-content: center;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type=text],
-input[type=email],
-textarea {
+.form h4 {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
   width: 100%;
   padding: 10px;
-  margin: 8px 0;
-  border-radius: 4px;
   border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
+  background-color: #28a745;
   color: white;
+  padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 15px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #218838;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-  display: block;
-}
-
-#contacto {
-  background-color: #cce6ff;
-}
-
-#contacto label {
-  color: #45a049;
-}
-
-#contacto h2 {
-  color: darkcyan;
-}
-*/
-
-/* Estilo para enlaces */
-
+/* ENLACES */
 a {
   color: #333;
-
 }
 
 a:hover {
   color: #0073e6;
 }
 
-/* Footer */
-
+/* FOOTER */
 footer {
   background-color: #333;
   color: white;
@@ -223,27 +220,24 @@ footer {
 
 footer a {
   color: #ff9800;
-  text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
   }
 
-
   #inicio,
   #biografia,
   #proyecto {
     display: block;
-    align-items: center;
     text-align: center;
     padding: 20px;
-    height: auto;
     min-height: auto;
   }
 
@@ -258,11 +252,7 @@ footer a:hover {
     width: 100%;
   }
 
-  label {
-    display: none;
-  }
-
-  input {
+  label, input {
     display: none;
   }
 }
